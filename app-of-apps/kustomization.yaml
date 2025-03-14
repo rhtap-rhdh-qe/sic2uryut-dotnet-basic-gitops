@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: sic2uryut-dotnet-basic 
+  janus-idp.io/tekton: sic2uryut-dotnet-basic
+  backstage.io/kubernetes-id: sic2uryut-dotnet-basic
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: sic2uryut-dotnet-basic
+resources:
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
